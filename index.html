@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page with Bright Pattern chat widget</title>
+</head>
+<body>
+    <h3>
+        This is the page with our Bright Pattern client chat widget!
+    </h3>
+    <button name="open_new_window_btn" onclick="popopen();">Always open new window</button>
+    <!-- You have to put this piece of JavaScript code into your web page
+    Note: Use <!DOCTYPE html> on the page where snippet located for better rendering
+    -->
+    <link type="text/css" rel="stylesheet" href="https://surflychat.web.app/css/form.css">
+    <script type="text/javascript">
+        SERVICE_PATTERN_CHAT_CONFIG = {
+            appId: 'c512fcaa2c834d6eb135f61eadaa2b42',
+            apiUrl: 'https://ocean08.brightpattern.com/clientweb/api/v1',
+            tenantUrl: 'artemz.brightpattern.com',
+            chatPath: 'https://surflychat.web.app/',
+            first_name: 'Peso',
+            last_name: 'Jinxiah',
+            email: 'perso.jsonrew@gmailcom',
+            phone_number: '99254440523',
+            autostartChat: true,
+            google_test: '142352352532'
+        };
+    </script>
+    <script src="https://surflychat.web.app/js/init.js"></script>
+    <script>
+        // This will initiate Upscope connection. It's important it is added to all pages, even when the user is not logged in.
+        (function(w, u, d){var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};var l = function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://code.upscope.io/u5M9nAByV5.js';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(typeof u!=="function"){w.Upscope=i;l();}})(window, window.Upscope, document);
+        
+        Upscope('init');
+        </script>
+        
+        <script>
+        // If the user is logged in, optionally identify them with the following method.
+        // You can call Upscope('updateConnection', {}); at any time.
+        Upscope('updateConnection', {
+          // Set the user ID below. If you don't have one, set to undefined.
+          uniqueId: "user_unique_id",
+        
+          // Set the user name or email below (e.g. ["John Smith", "john.smith@acme.com"]).
+          identities: ["John Smith", "john.smith@acme.com"]
+        });
+        </script>
+</body>
+</html>
